@@ -1,0 +1,15 @@
+<h2 class"text-3xl font-bold text-gray-900">New Book</h2>
+<%= form_with model: @book, remote: true, data: {"hx-post": books_path, "hx-target": 
+'#books-list', "hx-swap": 'beforeend'}  do |form| %>
+<div>
+  <%= form.label :title %>
+  <%= form.text_field :tile %>
+</div>
+<div>
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+</div>
+  <div class="btn-primary">
+    <%= form.submit "Create Book" %>
+  </div>
+<% end %>

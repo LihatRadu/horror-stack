@@ -1,0 +1,11 @@
+<h1 class="text-3xl font-bold text-gray-900">Books</h1>
+
+<div id="book-list">
+  <%= render @books %>
+</div>
+
+<%= link_to "New Book", new_book_path, data: {"hx-get": new_book_path, "hx-target":'#new-book-form', "hx-swap": 'innerHTML'} %>
+
+<div id="new-book-form">
+  
+</div>
